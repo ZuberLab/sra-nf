@@ -21,7 +21,7 @@ process fetch {
     tag { srr }
 
     publishDir path: "${params.resultsDir}",
-               mode: 'move',
+               mode: 'copy',
                saveAs: { filename -> filename.replaceFirst(/_pass/, "") }
 
     input:
