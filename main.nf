@@ -20,9 +20,9 @@ process fetch {
 
     tag { srr }
 
-    publishDir path: "${params.resultsDir}",
+    publishDir path: "${params.resultsDir}/reads",
                mode: 'copy',
-               saveAs: { filename -> filename.replaceFirst(/_pass/, "") }
+               saveAs: { filename -> filename.replaceFirst(/_pass/, '') }
 
     input:
     val(srr) from srrFiles
