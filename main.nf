@@ -31,7 +31,7 @@ process fetch {
     file('*.fastq.gz') into fetchedFiles
 
     script:
-    flag_sample = params.sample ? "-X ${params.sample}" : ''
+    flag_sample = params.sample ? "-X 10 : ''
 
     """
     fastq-dump \
